@@ -42,11 +42,13 @@ function pAequorFactory(number, dnaString) {
           let survivalPercentage = survival / this.dna.length;
           console.log(survivalPercentage);
           return survivalPercentage >= 0.6 ? true : false;
-        }
+        },
     }
 }
+let pAequorColony = [];
 
-let pAequor1 = pAequorFactory(1, mockUpStrand());
-let pAequor2 = pAequorFactory(2, mockUpStrand());
-console.log(pAequor1)
-console.log(pAequor1.willLikelySurvive());
+for (i=1, i=30, i++) {
+  pAequorColony.push(pAequorFactory(i, mockUpStrand()));
+};
+
+console.log(pAequorColony);
