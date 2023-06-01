@@ -47,7 +47,7 @@ function pAequorFactory(number, dnaString) {
 }
 let pAequorColony = [];
 
-for (i=1, i=30, i++) {
+for (i=1; i<=30; i++) {
   pAequorColony.push(pAequorFactory(i, mockUpStrand()));
 };
 
