@@ -33,10 +33,20 @@ function pAequorFactory(number, dnaString) {
             }
             let percentage = equalStr / specimen.length;
             return (`specimen #1 and apecimen #2 have ${percentage * 100}% in common.`)
+        },
+        willLikelySurvive() {
+          let survival = 0
+          for (i = 0; i < this.dna.length; i++){
+            if (this.dna[i] === 'C' || this.dna[i] === 'G') {survival += 1};
+        }
+          let survivalPercentage = survival / this.dna.length;
+          console.log(survivalPercentage);
+          return survivalPercentage >= 0.6 ? true : false;
         }
     }
 }
 
 let pAequor1 = pAequorFactory(1, mockUpStrand());
 let pAequor2 = pAequorFactory(2, mockUpStrand());
-console.log(pAequor1.compareDNA(pAequor2.dna));
+console.log(pAequor1)
+console.log(pAequor1.willLikelySurvive());
