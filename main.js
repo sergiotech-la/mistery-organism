@@ -31,9 +31,8 @@ function pAequorFactory(number, dnaString) {
             for (i = 0; i < specimen.length; i++){
                 if (specimen[i] === this.dna[i]) {equalStr += 1}
             }
-            console.log(equalStr)
             let percentage = equalStr / specimen.length;
-            return console.log(`specimen #1 and apecimen #2 have ${percentage * 100}% in common.`)
+            return (`specimen #1 and apecimen #2 have ${percentage * 100}% in common.`)
         }
     }
 }
